@@ -71,7 +71,8 @@ BasicBlock *BBjoin = nullptr;
 %token <reg> REG
 %token <reg> ARG
 %token <imm> IMMEDIATE     
-%token ASSIGN SEMI PLUS MINUS LPAREN RPAREN LBRACE RBRACE COMMA MULTIPLY DI>%token RETURN
+%token ASSIGN SEMI PLUS MINUS LPAREN RPAREN LBRACE RBRACE COMMA MULTIPLY DIVIDE NOT IF WHILE
+%token RETURN
 
 %type <valVec> exprlist exprlist_opt
 %type expr
