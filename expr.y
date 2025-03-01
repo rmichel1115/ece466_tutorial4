@@ -271,7 +271,12 @@ LBRACE stmtlist RBRACE /* if stmt */
 expr RPAREN
 {
   Function *F = Builder.GetInsertBlock()->getParent();
-  BasicBlock *body =                                                              BasicBlock::Create(TheContext,"w.body",F);                              BasicBlock *exit =                                                              BasicBlock::Create(TheContext,"w.exit",F);                              Builder.CreateCondBr(Builder.CreateICmpNE($4, Builder.getInt32(0)),body,e>  Builder.SetInsertPoint(body);
+  BasicBlock *body =      
+    BasicBlock::Create(TheContext,"w.body",F);
+    BasicBlock *exit =
+     BasicBlock::Create(TheContext,"w.exit",F);
+ Builder.CreateCondBr(Builder.CreateICmpNE($4, Builder.getInt32(0)),body,exit);
+Builder.SetInsertPoint(body);
 
 
   $<blocks>3.exit = exit;
