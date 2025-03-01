@@ -15,7 +15,7 @@ include(AddLLVM)
 add_definitions(${LLVM_DEFINITIONS})
 include_directories(${LLVM_INCLUDE_DIRS})
 
-llvm_map_components_to_libnames(llvm_libs analysis bitreader bitwriter code>
+llvm_map_components_to_libnames(llvm_libs analysis bitreader bitwriter code)
 
 
 BISON_TARGET(Parser expr.y ${CMAKE_CURRENT_BINARY_DIR}/expr.y.cpp)
